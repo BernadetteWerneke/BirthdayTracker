@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    tools:context="de.syntax_institut.birthdaytracker.MainActivity">
+
+    <TextView
+        android:id="@+id/greeting_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="175dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginEnd="178dp"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Hi Peter" />
+
+    <TextView
+        android:id="@+id/daysUntil_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/greeting_text"
+        tools:text="xy das until..." />
+
+    <EditText
+        android:id="@+id/vorname_text"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:ems="10"
+        android:hint="first name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/daysUntil_text"
+        app:layout_constraintVertical_bias="0.56" />
+
+    <EditText
+        android:id="@+id/nachname_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="second name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/vorname_text"
+        app:layout_constraintStart_toStartOf="@+id/vorname_text"
+        app:layout_constraintTop_toBottomOf="@+id/vorname_text" />
+
+    <Spinner
+        android:id="@+id/monthText"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:entries="@array/months"
+        app:layout_constraintEnd_toEndOf="@+id/nachname_text"
+        app:layout_constraintStart_toEndOf="@+id/birthdayText"
+        app:layout_constraintTop_toBottomOf="@+id/nachname_text" />
+
+    <Spinner
+        android:id="@+id/birthdayText"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:entries="@array/days"
+        app:layout_constraintStart_toStartOf="@+id/nachname_text"
+        app:layout_constraintTop_toBottomOf="@+id/nachname_text" />
+
+    <Button
+        android:id="@+id/buttonCalculate"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="calculate"
+        app:layout_constraintEnd_toEndOf="@+id/monthText"
+        app:layout_constraintStart_toStartOf="@+id/birthdayText"
+        app:layout_constraintTop_toBottomOf="@+id/nachname_text" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
